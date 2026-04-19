@@ -1,27 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-nordic-bg: #F7F7F5;
-  --color-nordic-surface: #FFFFFF;
-  --color-nordic-border: #E6E5E0;
-  --color-nordic-text: #2A2D30;
-  --color-nordic-text-muted: #666A6D;
-  --color-nordic-blue: #324A5F;
-  --color-nordic-blue-light: #F0F3F5;
-  --color-nordic-accent: #C87963;
-  --color-nordic-accent-light: #FBF4F2;
-  --color-nordic-green: #6B8E7B;
-  --color-nordic-green-light: #F2F6F4;
+  /* GS1 Brand Colors */
+  --color-gs1-blue: #003087;
+  --color-gs1-blue-hover: #002570;
+  --color-gs1-blue-light: #E6EDF5;
+  --color-gs1-orange: #F26334;
+  --color-gs1-orange-light: #FEF0EB;
 
+  /* Surface */
+  --color-gs1-bg: #F5F5F5;
+  --color-gs1-surface: #FFFFFF;
+  --color-gs1-border: #E0E0E0;
+
+  /* Text */
+  --color-gs1-text: #1A1A1A;
+  --color-gs1-muted: #5C5C5C;
+
+  /* Typography — Inter for body, Montserrat for headings */
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Lora", ui-serif, Georgia, serif;
+  --font-display: "Montserrat", ui-sans-serif, system-ui, sans-serif;
 }
 
 body {
-  @apply bg-nordic-bg text-nordic-text font-sans antialiased;
+  @apply bg-gs1-bg text-gs1-text font-sans antialiased;
+  font-size: 16px;
+  line-height: 1.7;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  @apply text-nordic-blue;
+h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-gs1-blue);
+  line-height: 1.2;
+}
+
+h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-gs1-blue);
+  line-height: 1.3;
+}
+
+h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--color-gs1-blue);
 }

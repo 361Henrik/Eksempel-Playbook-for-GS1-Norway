@@ -49,26 +49,26 @@ export default function Audiences() {
         description="Vi prioriterer på tre akser: Sektor, Rolle og Makrobehov. Her er våre Audience Cards."
       />
 
-      <div className="bg-white p-6 rounded-2xl shadow-sm border border-nordic-border mb-8">
-        <h3 className="text-lg font-semibold text-nordic-blue mb-4">Prioriteringsakser</h3>
+      <div className="bg-white p-6 rounded-2xl shadow-sm border border-gs1-border mb-8">
+        <h3 className="text-lg font-semibold text-gs1-blue mb-4">Prioriteringsakser</h3>
         <div className="grid md:grid-cols-3 gap-4">
-          <div className="p-4 bg-nordic-bg rounded-lg">
-            <h4 className="font-bold text-nordic-text mb-2">1. Sektor</h4>
-            <p className="text-sm text-nordic-text-muted">Bygg, helse, energi, dagligvare (pri 1), deretter øvrige bransjer.</p>
+          <div className="p-4 bg-gs1-bg rounded-lg">
+            <h4 className="font-bold text-gs1-text mb-2">1. Sektor</h4>
+            <p className="text-sm text-gs1-muted">Bygg, helse, energi, dagligvare (pri 1), deretter øvrige bransjer.</p>
           </div>
-          <div className="p-4 bg-nordic-bg rounded-lg">
-            <h4 className="font-bold text-nordic-text mb-2">2. Rolle</h4>
-            <p className="text-sm text-nordic-text-muted">C-suite/ledelse, fag/operasjon, IKT/digital, marked/kommunikasjon, bærekraft.</p>
+          <div className="p-4 bg-gs1-bg rounded-lg">
+            <h4 className="font-bold text-gs1-text mb-2">2. Rolle</h4>
+            <p className="text-sm text-gs1-muted">C-suite/ledelse, fag/operasjon, IKT/digital, marked/kommunikasjon, bærekraft.</p>
           </div>
-          <div className="p-4 bg-nordic-bg rounded-lg">
-            <h4 className="font-bold text-nordic-text mb-2">3. Makrobehov</h4>
-            <p className="text-sm text-nordic-text-muted">Effektivitet/kostnad, sporbarhet/pasientsikkerhet, etterlevelse, bærekraft, innovasjon.</p>
+          <div className="p-4 bg-gs1-bg rounded-lg">
+            <h4 className="font-bold text-gs1-text mb-2">3. Makrobehov</h4>
+            <p className="text-sm text-gs1-muted">Effektivitet/kostnad, sporbarhet/pasientsikkerhet, etterlevelse, bærekraft, innovasjon.</p>
           </div>
         </div>
       </div>
 
       <div>
-        <h3 className="text-2xl font-bold text-nordic-blue mb-6">Audience Cards (Eksempler)</h3>
+        <h3 className="text-2xl font-bold text-gs1-blue mb-6">Audience Cards (Eksempler)</h3>
         
         <div className="flex flex-wrap gap-2 mb-6">
           {AUDIENCE_CARDS.map(card => {
@@ -80,8 +80,8 @@ export default function Audiences() {
                 onClick={() => setActiveCard(card.id)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-colors border
                   ${isActive 
-                    ? 'bg-nordic-blue text-white border-nordic-blue' 
-                    : 'bg-white text-nordic-text border-nordic-border hover:border-nordic-blue'}`}
+                    ? 'bg-gs1-blue text-white border-gs1-blue' 
+                    : 'bg-white text-gs1-text border-gs1-border hover:border-gs1-blue'}`}
               >
                 <Icon size={16} />
                 {card.sector}
@@ -90,7 +90,7 @@ export default function Audiences() {
           })}
         </div>
 
-        <div className="bg-white rounded-2xl shadow-sm border border-nordic-border overflow-hidden">
+        <div className="bg-white rounded-2xl shadow-sm border border-gs1-border overflow-hidden">
           {AUDIENCE_CARDS.map(card => card.id === activeCard && (
             <motion.div 
               key={card.id} 
@@ -98,9 +98,9 @@ export default function Audiences() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="bg-nordic-blue p-6 text-white flex items-center gap-4">
+              <div className="bg-gs1-blue p-6 text-white flex items-center gap-4">
                 <div className="p-3 bg-white/10 rounded-xl">
-                  <card.icon size={32} className="text-nordic-accent" />
+                  <card.icon size={32} className="text-gs1-orange" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold m-0">{card.sector}</h3>
@@ -111,22 +111,22 @@ export default function Audiences() {
               <div className="p-6 grid md:grid-cols-2 gap-8">
                 <div className="space-y-6">
                   <div>
-                    <h4 className="text-sm font-bold text-nordic-text-muted uppercase tracking-wider mb-3">Forretningsmål & KPIer</h4>
+                    <h4 className="text-sm font-bold text-gs1-muted uppercase tracking-wider mb-3">Forretningsmål & KPIer</h4>
                     <ul className="space-y-2">
                       {card.goals.map((goal, i) => (
-                        <li key={i} className="flex items-center gap-2 text-nordic-text">
-                          <div className="w-1.5 h-1.5 rounded-full bg-nordic-accent" />
+                        <li key={i} className="flex items-center gap-2 text-gs1-text">
+                          <div className="w-1.5 h-1.5 rounded-full bg-gs1-orange" />
                           {goal}
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-nordic-text-muted uppercase tracking-wider mb-3">Utfordringer & Risiko</h4>
+                    <h4 className="text-sm font-bold text-gs1-muted uppercase tracking-wider mb-3">Utfordringer & Risiko</h4>
                     <ul className="space-y-2">
                       {card.challenges.map((challenge, i) => (
-                        <li key={i} className="flex items-center gap-2 text-nordic-text">
-                          <div className="w-1.5 h-1.5 rounded-full bg-nordic-accent" />
+                        <li key={i} className="flex items-center gap-2 text-gs1-text">
+                          <div className="w-1.5 h-1.5 rounded-full bg-gs1-orange" />
                           {challenge}
                         </li>
                       ))}
@@ -136,28 +136,28 @@ export default function Audiences() {
 
                 <div className="space-y-6">
                   <div>
-                    <h4 className="text-sm font-bold text-nordic-text-muted uppercase tracking-wider mb-3">Typiske Innvendinger</h4>
+                    <h4 className="text-sm font-bold text-gs1-muted uppercase tracking-wider mb-3">Typiske Innvendinger</h4>
                     <div className="space-y-2">
                       {card.objections.map((obj, i) => (
-                        <div key={i} className="bg-nordic-bg p-3 rounded-lg text-sm text-nordic-text italic border-l-2 border-nordic-text-muted">
+                        <div key={i} className="bg-gs1-bg p-3 rounded-lg text-sm text-gs1-text italic border-l-2 border-gs1-muted">
                           {obj}
                         </div>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-nordic-text-muted uppercase tracking-wider mb-3">Kanaler & Format</h4>
+                    <h4 className="text-sm font-bold text-gs1-muted uppercase tracking-wider mb-3">Kanaler & Format</h4>
                     <div className="flex flex-wrap gap-2">
                       {card.channels.map((channel, i) => (
-                        <span key={i} className="px-3 py-1 bg-nordic-blue-light text-nordic-blue rounded-full text-xs font-medium border border-nordic-border">
+                        <span key={i} className="px-3 py-1 bg-gs1-blue-light text-gs1-blue rounded-full text-xs font-medium border border-gs1-border">
                           {channel}
                         </span>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-nordic-text-muted uppercase tracking-wider mb-2">Ønsket Handling (CTA)</h4>
-                    <p className="text-nordic-text font-medium">{card.action}</p>
+                    <h4 className="text-sm font-bold text-gs1-muted uppercase tracking-wider mb-2">Ønsket Handling (CTA)</h4>
+                    <p className="text-gs1-text font-medium">{card.action}</p>
                   </div>
                 </div>
               </div>
