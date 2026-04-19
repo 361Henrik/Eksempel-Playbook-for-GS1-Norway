@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { SectionHeader } from './ui/SectionHeader';
-import { Building2, HeartPulse, ShoppingCart } from 'lucide-react';
+import { Building2, HeartPulse, ShoppingCart, Zap, Truck } from 'lucide-react';
 
 const AUDIENCE_CARDS = [
   {
@@ -36,6 +36,28 @@ const AUDIENCE_CARDS = [
     objections: ['"2D-koder krever oppgradering av alle kasser"'],
     channels: ['LinkedIn', 'Nyhetsbrev', 'Bransjetreff'],
     action: 'Melde seg på webinar om overgang til 2D-koder'
+  },
+  {
+    id: 'energi',
+    sector: 'Energi',
+    icon: Zap,
+    role: 'Driftssjef / Asset Manager',
+    goals: ['Sikker og effektiv vedlikeholdsstyring', 'Redusere nedetid', 'Etterleve regulatoriske rapporteringskrav'],
+    challenges: ['Tusenvis av komponenter fra hundrevis av leverandører uten felles ID', 'Manuelle prosesser for reservedelsbestilling', 'Nye EU-krav til produktdokumentasjon'],
+    objections: ['"Vi har egne interne systemer som fungerer godt nok"', '"Bransjen er ikke standardisert nok til at GS1 hjelper"'],
+    channels: ['LinkedIn', 'Fagkonferanser (ONS, Energi Norge)', 'Direkte dialog', 'Web/artikkel'],
+    action: 'Bestille en gjennomgang med GS1-rådgiver for komponentidentifikasjon'
+  },
+  {
+    id: 'grossist',
+    sector: 'Grossist / Logistikk',
+    icon: Truck,
+    role: 'Logistikkdirektør / Operasjonsdirektør',
+    goals: ['Feilfri ordrebehandling', 'Effektiv lagerstyring', 'Automatisert varemottak og fakturering'],
+    challenges: ['Avvik mellom leverandørdata og eget system', 'Manuell håndtering av produktdata fra hundrevis av leverandører', 'Krav om mer sporbarhet fra kunder og myndigheter'],
+    objections: ['"Vi er mellomledd — produsentene må ta ansvaret"', '"Vi har ikke kapasitet til å tvinge leverandørene over på GS1"'],
+    channels: ['LinkedIn', 'Nyhetsbrev', 'Bransjetreff (Logistikk & Transport)', 'Direkte dialog'],
+    action: 'Laste ned GS1 Sync-veileder for grossister'
   }
 ];
 

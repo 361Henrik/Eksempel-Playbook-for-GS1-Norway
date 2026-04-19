@@ -8,6 +8,8 @@ import {
   PenTool,
   Share2,
   Bot,
+  FileText,
+  Library,
   Menu,
   X
 } from 'lucide-react';
@@ -19,6 +21,8 @@ import Messaging from './components/Messaging';
 import Processes from './components/Processes';
 import ToneOfVoice from './components/ToneOfVoice';
 import Channels from './components/Channels';
+import Templates from './components/Templates';
+import Topics from './components/Topics';
 import AITools from './components/AITools';
 
 const SECTIONS = [
@@ -29,6 +33,8 @@ const SECTIONS = [
   { id: 'processes', title: 'Arbeidsprosesser (SOP)', icon: Settings, component: Processes },
   { id: 'tone', title: 'Tone of Voice', icon: PenTool, component: ToneOfVoice },
   { id: 'channels', title: 'Kanaler', icon: Share2, component: Channels },
+  { id: 'templates', title: 'Maler & Sjekklister', icon: FileText, component: Templates },
+  { id: 'topics', title: 'Temabibliotek', icon: Library, component: Topics },
   { id: 'ai', title: 'AI & Verktøy', icon: Bot, component: AITools },
 ];
 
