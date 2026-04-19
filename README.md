@@ -1,20 +1,63 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# GS1 Norway — Kommunikasjonsplaybook
 
-# Run and deploy your AI Studio app
+Live playbook for GS1 Norways kommunikasjonsstrategi, bygget med React + Vite + Tailwind CSS.
 
-This contains everything you need to run your app locally.
+**Live URL:** https://playbook.gs1.threesix1.com
 
-View your app in AI Studio: https://ai.studio/apps/56da9061-c8ba-46b0-afe1-bcc54832e618
+## Stack
 
-## Run Locally
+- React 19 + TypeScript
+- Vite 6
+- Tailwind CSS v4 (nordic design tokens)
+- Framer Motion (page transitions)
+- Lucide React (ikoner)
+- Deployet via Vercel — auto-deploy ved push til `main`
 
-**Prerequisites:**  Node.js
+## Lokal utvikling
 
+**Forutsetning:** Node.js 18+
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+npm install
+npm run dev
+```
+
+Åpnes på http://localhost:3000
+
+## Deploy
+
+Alle push til `main` deployes automatisk via Vercel.
+
+```bash
+git add .
+git commit -m "din melding"
+git push origin main
+```
+
+## Prosjektstruktur
+
+```
+src/
+  App.tsx              # Navigasjon + shell
+  components/
+    Introduction.tsx
+    Framework.tsx
+    Audiences.tsx
+    Messaging.tsx
+    Processes.tsx
+    ToneOfVoice.tsx
+    Channels.tsx
+    AITools.tsx
+    ui/
+      SectionHeader.tsx
+  index.css            # Nordic design tokens
+```
+
+## Del av GS1 × ThreeSixtyOne AI-suite
+
+| App | URL |
+|-----|-----|
+| Dynamisk Brief | dynamiskbrief.gs1.threesix1.com |
+| InfoHub | infohub.gs1.threesix1.com |
+| Publish | publish.gs1.threesix1.com |
+| **Playbook** | **playbook.gs1.threesix1.com** |
