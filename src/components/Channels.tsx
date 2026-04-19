@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import { SectionHeader } from './ui/SectionHeader';
 import { Linkedin, Globe, Mail, Video, Users, CheckCircle2, AlertCircle, Target, MessageSquare } from 'lucide-react';
 
