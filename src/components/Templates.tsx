@@ -343,6 +343,7 @@ export default function Templates() {
       <SectionHeader
         title="Maler og Sjekklister"
         description="Klare-til-bruk maler for de viktigste innholdstypene, godkjenningsflyt og interaktiv publiseringssjekkliste."
+        exampleNote="Malene kan brukes direkte eller tilpasses — de er ikke offisielt godkjent"
       />
 
       {/* Maler */}

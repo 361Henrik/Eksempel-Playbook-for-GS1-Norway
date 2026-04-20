@@ -66,9 +66,10 @@ export default function Audiences() {
 
   return (
     <div className="space-y-12">
-      <SectionHeader 
-        title="Målgrupper og Roller" 
+      <SectionHeader
+        title="Målgrupper og Roller"
         description="Vi prioriterer på tre akser: Sektor, Rolle og Makrobehov. Her er våre Audience Cards."
+        exampleNote="Audience cards er illustrative — basert på offentlig tilgjengelig bransjeinnsikt"
       />
 
       <div className="bg-white p-6 rounded-2xl shadow-sm border border-gs1-border mb-8">

@@ -212,6 +212,7 @@ export default function Topics() {
       <SectionHeader
         title="GS1-temabibliotek"
         description="Oversikt over de viktigste temaene GS1 Norway kommuniserer om — med målgruppe, budskapspilar, kanalanbefaling og eksempeloverskrifter."
+        exampleNote="Innholdet er basert på offentlig GS1-dokumentasjon og bransjeinformasjon"
       />
 
       {/* Temavelger — grid */}

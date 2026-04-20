@@ -285,6 +285,7 @@ export default function Processes() {
       <SectionHeader
         title="Arbeidsprosesser og Ansvar (SOP)"
         description="Tre kjerne-SOPer som definerer hvem som gjør hva — fra brief til publisering, webinar til krisehåndtering."
+        exampleNote="SOPene er et forslag til arbeidsmodell — ikke vedtatte rutiner"
       />
 
       {/* Gammel vs. ny modell */}

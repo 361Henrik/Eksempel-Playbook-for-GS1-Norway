@@ -98,6 +98,7 @@ export default function Messaging() {
       <SectionHeader
         title="Budskap og Verdiforslag"
         description="Godkjente budskap per sektor — fra overordnet posisjon til konkrete verdiforslag med dokumentasjon og CTA."
+        exampleNote="Verdiforslag og case-tall er estimater og eksempler — ikke offisielle GS1-tall"
       />
 
       {/* Budskapsarkitektur */}

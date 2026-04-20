@@ -10,8 +10,10 @@ import {
   Bot,
   FileText,
   Library,
+  Upload,
   Menu,
-  X
+  X,
+  Info
 } from 'lucide-react';
 
 import Introduction from './components/Introduction';
@@ -24,6 +26,9 @@ import Channels from './components/Channels';
 import Templates from './components/Templates';
 import Topics from './components/Topics';
 import AITools from './components/AITools';
+import SourceImport from './components/SourceImport';
+import { SidebarContextBadge } from './components/ui/SidebarContextBadge';
+import { AboutModal } from './components/ui/AboutModal';
 
 const SECTIONS = [
   { id: 'intro', title: 'Introduksjon', icon: BookOpen, component: Introduction },
@@ -36,11 +41,13 @@ const SECTIONS = [
   { id: 'templates', title: 'Maler & Sjekklister', icon: FileText, component: Templates },
   { id: 'topics', title: 'Temabibliotek', icon: Library, component: Topics },
   { id: 'ai', title: 'AI & Verktøy', icon: Bot, component: AITools },
+  { id: 'import', title: 'Legg til innhold', icon: Upload, component: SourceImport },
 ];
 
 export default function App() {
   const [activeSection, setActiveSection] = useState(SECTIONS[0].id);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
 
   const ActiveComponent = SECTIONS.find(s => s.id === activeSection)?.component || Introduction;
 
@@ -48,7 +55,7 @@ export default function App() {
     <div className="flex h-screen overflow-hidden bg-gs1-bg font-sans">
       {/* Sidebar */}
       <aside className={`
-        fixed inset-y-0 left-0 z-50 w-72 bg-gs1-surface border-r border-gs1-border transform transition-transform duration-300 ease-out
+        fixed inset-y-0 left-0 z-50 w-72 bg-gs1-surface border-r border-gs1-border transform transition-transform duration-300 ease-out flex flex-col
         md:relative md:translate-x-0
         ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}
       `}>
@@ -74,7 +81,7 @@ export default function App() {
               className="font-sans text-gs1-muted uppercase tracking-widest"
               style={{ fontSize: '9px', letterSpacing: '0.14em', marginTop: '8px' }}
             >
-              Henriks Playbook
+              Henriks Eksempel-Playbook
             </span>
           </div>
           <button className="md:hidden text-gs1-muted" onClick={() => setIsMobileMenuOpen(false)}>
@@ -82,7 +89,7 @@ export default function App() {
           </button>
         </div>
 
-        <nav className="mt-6 px-4 space-y-0.5">
+        <nav className="mt-6 px-4 space-y-0.5 flex-1">
           {SECTIONS.map((section) => {
             const Icon = section.icon;
             const isActive = activeSection === section.id;
@@ -106,7 +113,22 @@ export default function App() {
             );
           })}
         </nav>
+
+        <div className="mt-auto pt-4">
+          <button
+            onClick={() => setIsAboutOpen(true)}
+            className="w-full flex items-center gap-2 px-8 py-2 text-[11px] text-gs1-muted hover:text-gs1-blue transition-colors"
+          >
+            <Info size={13} strokeWidth={1.5} />
+            Om dette eksempelet
+          </button>
+          <div className="mt-2">
+            <SidebarContextBadge />
+          </div>
+        </div>
       </aside>
+
+      <AboutModal isOpen={isAboutOpen} onClose={() => setIsAboutOpen(false)} />
 
       {/* Main Content */}
       <main className="flex-1 flex flex-col h-full overflow-hidden relative">
@@ -118,7 +140,7 @@ export default function App() {
               <div className="h-[2px] bg-gs1-orange mt-0.5 mb-1" style={{ width: '22px' }} />
               <span className="font-display font-normal text-gs1-blue tracking-widest uppercase" style={{ fontSize: '9px', letterSpacing: '0.18em' }}>Norway</span>
             </div>
-            <span className="font-sans text-gs1-muted uppercase" style={{ fontSize: '8px', letterSpacing: '0.14em' }}>Henriks Playbook</span>
+            <span className="font-sans text-gs1-muted uppercase" style={{ fontSize: '8px', letterSpacing: '0.14em' }}>Henriks Eksempel-Playbook</span>
           </div>
           <button onClick={() => setIsMobileMenuOpen(true)} className="text-gs1-muted">
             <Menu size={24} strokeWidth={1.5} />

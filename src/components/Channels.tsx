@@ -266,6 +266,7 @@ export default function Channels() {
       <SectionHeader
         title="Kanaler og Formater"
         description="Komplett guide til hver kanal — formål, struktur, best practices, CTAer og kvalitetssjekk."
+        exampleNote="Best practices er basert på bransjepraksis — tilpass til GS1 Norways egne erfaringer"
       />
 
       {/* Kanal-velger */}
